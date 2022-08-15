@@ -63,8 +63,20 @@ public class CheckoutClient {
 	
 
 	private void completed(CheckoutResult result) {
+	
 		
-		System.out.println("Total: " + "£" + df.format(result.getFinalAmount()));
+		//Return in pounds
+		StringBuilder totalBuilder = new StringBuilder();
+		totalBuilder.append("Total: ");
+		
+		if(result.getFinalAmount() >= 100) {
+			totalBuilder.append("£" + df.format(result.getFinalAmount() / 100));
+		}
+		else {
+			totalBuilder.append(result.getFinalAmount() + "p");
+		}
+			
+		System.out.println(totalBuilder.toString());
 		
 	}
 	

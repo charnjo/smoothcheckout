@@ -21,12 +21,12 @@ public class CheckoutServiceImpl implements CheckoutService {
 	public CheckoutResult checkout(Cart cart) {
 
 		CheckoutResult checkoutResult = new CheckoutResult();
-		Double amountToPay = 0.0;
+		Integer amountToPay = 0;
 
 		//Loop through selected items
 		for (Map.Entry<String, Integer> entry : cart.getMappedItems().entrySet()) {
 
-			Double itemCost = 0.0;
+			Integer itemCost = 0;
 			Item item = this.superMarketService.allItems().stream().filter(i -> i.getSku().equals(entry.getKey()))
 					.findFirst().get();
 
@@ -34,8 +34,9 @@ public class CheckoutServiceImpl implements CheckoutService {
 			if (superMarketService.allMultiprices().stream().anyMatch(mp -> mp.getItemId().equals(itemId))) {
 				MultiPrice itemMultiprice = this.superMarketService.allMultiprices().stream()
 						.filter(mp -> mp.getItemId().equals(entry.getKey())).findFirst().get();
+				
 				int itemMultipriceQuantity = itemMultiprice.getQuantity();
-				Double itemMultipriceValue = itemMultiprice.getPrice();
+				Integer itemMultipriceValue = itemMultiprice.getPrice();
 
 				int itemQuantyDiscounted = entry.getValue() - (entry.getValue() % itemMultipriceQuantity);
 

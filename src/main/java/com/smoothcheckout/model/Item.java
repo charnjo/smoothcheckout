@@ -2,13 +2,13 @@ package com.smoothcheckout.model;
 
 public class Item {
 	private String sku;
-	private Double price;
+	private Integer price;
 
 	/**
 	 * @param sku
 	 * @param price
 	 */
-	public Item(String sku, Double price) {
+	public Item(String sku, Integer price) {
 		super();
 		this.sku = sku;
 		this.setPrice(price);
@@ -31,14 +31,14 @@ public class Item {
 	/**
 	 * @return the price
 	 */
-	public Double getPrice() {
+	public Integer getPrice() {
 		return price;
 	}
 
 	/**
 	 * @param price the price to set
 	 */
-	public void setPrice(Double price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
 

@@ -72,9 +72,9 @@ class CheckoutServiceTest {
 	@DisplayName("Checkout tests")
 	void testCheckout() {
 		Assertions.assertAll(
-		       () -> assertEquals(checkoutService.checkout(defaultCart).getFinalAmount(), 3.6),
-		       () -> assertEquals(checkoutService.checkout(defaultCart2).getFinalAmount(), 3.9),
-		       () -> assertEquals(checkoutService.checkout(defaultCart3).getFinalAmount(), 4.3));
+		       () -> assertEquals(checkoutService.checkout(defaultCart).getFinalAmount(), 360),
+		       () -> assertEquals(checkoutService.checkout(defaultCart2).getFinalAmount(), 390),
+		       () -> assertEquals(checkoutService.checkout(defaultCart3).getFinalAmount(), 430));
 	}
 
 }

@@ -3,7 +3,7 @@ package com.smoothcheckout.model;
 public class MultiPrice {
 	private String itemId;
 	private int quantity;
-	private Double price;
+	private Integer price;
 	
 	
 	/**
@@ -11,7 +11,7 @@ public class MultiPrice {
 	 * @param quantity
 	 * @param price
 	 */
-	public MultiPrice(String itemId, int quantity, Double price) {
+	public MultiPrice(String itemId, int quantity, Integer price) {
 		this.itemId = itemId;
 		this.quantity = quantity;
 		this.price = price;
@@ -29,10 +29,10 @@ public class MultiPrice {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public Double getPrice() {
+	public Integer getPrice() {
 		return price;
 	}
-	public void setPrice(Double price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
 	

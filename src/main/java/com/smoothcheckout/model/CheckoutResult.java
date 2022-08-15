@@ -2,7 +2,7 @@ package com.smoothcheckout.model;
 
 public class CheckoutResult {
 	private Cart cart;
-	private Double finalAmount;
+	private Integer finalAmount;
 	
 	public CheckoutResult() {}
 
@@ -14,11 +14,11 @@ public class CheckoutResult {
 		this.cart = cart;
 	}
 
-	public Double getFinalAmount() {
+	public Integer getFinalAmount() {
 		return finalAmount;
 	}
 
-	public void setFinalAmount(Double finalAmount) {
+	public void setFinalAmount(Integer finalAmount) {
 		this.finalAmount = finalAmount;
 	}
 

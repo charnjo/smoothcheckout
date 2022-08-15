@@ -29,25 +29,25 @@ public class SuperMarketServiceImpl implements SuperMarketService {
 	}
 	
 	public void populateStoreItems() {
-		Item itemA = new Item("A", 0.50);
+		Item itemA = new Item("A", 50);
 		allItems.add(itemA);
 		
-		Item itemB = new Item("B", 0.30);
+		Item itemB = new Item("B", 30);
 		allItems.add(itemB);
 
-		Item itemC = new Item("C", 0.20);
+		Item itemC = new Item("C", 20);
 		allItems.add(itemC);
 
-		Item itemD = new Item("D", 0.15);
+		Item itemD = new Item("D", 15);
 		allItems.add(itemD);
 
 	}
 
 	public void populateStoreMultiPrice() {
-		MultiPrice mp1 = new MultiPrice("A", 3, 1.30);
+		MultiPrice mp1 = new MultiPrice("A", 3, 130);
 		allMultiPrices.add(mp1);
 		
-		MultiPrice mp2 = new MultiPrice("B", 2, 0.45);
+		MultiPrice mp2 = new MultiPrice("B", 2, 045);
 		allMultiPrices.add(mp2);
 
 	}
