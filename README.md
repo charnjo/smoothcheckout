@@ -21,8 +21,8 @@ Implement a checkout logic in Java
 - Run mvn clean test
 
 ## Run as Maven from Terminal
-- Build jar - > mvn clean package
-- Run program - > java -jar target/checkoutsystem-0.0.1-SNAPSHOT.jar
+- Build jar - > mvn clean package (check you have smoothcheckoutsystem-0.0.1-SNAPSHOT.jar)
+- Run program - > java -jar target/smoothcheckoutsystem-0.0.1-SNAPSHOT.jar
 - Enter a cart name
 - Scan item by entering item sku
 - Enter 'Done' to complete checkout
