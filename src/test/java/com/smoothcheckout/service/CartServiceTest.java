@@ -9,6 +9,7 @@ import java.util.Map;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
@@ -46,6 +47,7 @@ class CartServiceTest {
 	}
 
 	@Test
+	@DisplayName("test creating a cart")
 	void testCreateCart() {
 		System.out.println(cartList.size());
 		assertTrue(cartList.stream().count() > 0, () -> "Should have atleast 1 cart");
